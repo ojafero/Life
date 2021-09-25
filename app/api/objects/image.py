@@ -14,4 +14,13 @@ class Image(object):
     }
 
     return dest
+
+  def __repr__(self):
+    return(
+      f'Image(\
+        url={self.url}, \
+        upload_date={self.upload_date} \
+      )'
+    )
+            
   
