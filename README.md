@@ -8,9 +8,10 @@
 ---
 
 ## Development (Linux Environment)
-0. Make python virtual environment from `app/api/`
+NOTE: steps 1-3 only needed if you are looking to dev on the API
+1. Create Python virtual environment
 ```
-python3.8 -m venv venv`
+python3.8 -m venv venv
 ```
 2. Source the virtual Python development environent. From the `app` directonry, run
 ```
@@ -27,7 +28,7 @@ cd api/ && pip install -r requirements.txt
 
 ### Spin up the application
 * Navigate to the `app` directory
-* API: Run `yarn start-api` in a second terminal window. The server app will be listening on `localhost:5000`
+* API: If you are not developing the API, run `flask run`. Otherwise, if you have the `venv` folder created, run `yarn start-api` in a second terminal window. The server app will be listening on `localhost:5000`
 * Frontend: Run `yarn start`. This should launch a browser window at `localhost:3000`.
 
 The servers can continously run and should automatically refresh to reflect any code changes.
