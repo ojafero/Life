@@ -24,7 +24,7 @@ cd api/ && pip install -r requirements.txt
 ### Spin up the application
 * Navigate to the `app` directory
 * Frontend: Run `yarn start`. This should launch a browser window at `localhost:3000`.
-* API: Run `yarn start-api` in a second terminal window.
+* API: Run `yarn start-api` in a second terminal window. The server app will be listening on `localhost:5000`
 
 The servers can continously run and should automatically refresh to reflect any code changes.
 
