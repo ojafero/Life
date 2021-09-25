@@ -3,13 +3,16 @@
 ## Prerequisites
 * Node.js & npm
 * Yarn
-* Python v3.6+
+* Python 3.8.0
 
 ---
 
 ## Development (Linux Environment)
-Steps 1-2 only needed **if you want to dev on the API**, otherwise, skip to step 3.
-1. Source the virtual Python development environent. From the `app` directonry, run
+0. Make python virtual environment from `app/api/`
+```
+python3.8 -m venv venv`
+```
+2. Source the virtual Python development environent. From the `app` directonry, run
 ```
 source api/venv/bin/activate
 ```
