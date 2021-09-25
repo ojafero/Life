@@ -8,6 +8,7 @@
 ---
 
 ## Development (Linux Environment)
+Steps 1-2 only needed **if you want to dev on the API**, otherwise, skip to step 3.
 1. Source the virtual Python development environent. From the `app` directonry, run
 ```
 source api/venv/bin/activate
