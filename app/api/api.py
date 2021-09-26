@@ -12,7 +12,6 @@ default_app = initialize_app(cred)
 db = firestore.client()
 plants = db.collection('plants')
 images = db.collections('images')
-growers_plants = db.collection('growers_plants')
 
 # Test Route
 @app.route('/time', methods=['GET'])
@@ -29,9 +28,6 @@ def plant():
   # Update the ID now that we have it
   plant.id = plant_ref.id
   plant_ref.set(vars(plant))
-
-  # Indicate this grower is now in charge of another plant
-  growers_plants.add(vars(plant))
 
   return vars(plant)
 
@@ -57,6 +53,17 @@ def plant_id(id):
     return plant.to_dict()
 
 
+@app.route('/plants/<grower>', methods=['GET'])
+def grower_plants(grower):
+  desired_plants = plants.where(u'grower', '==', f'{grower}').stream()
+  
+  ret = {}
+  for plant in desired_plants:
+    ret[plant.id] = plant.to_dict()
+  
+  return ret
+
+
 @app.route('/trending/<number>', methods=['GET'])
 def trending(number):
   # TODO: For some reason this doesn't seem to work properly
@@ -67,14 +74,4 @@ def trending(number):
   for result in results:
     ret[result.id] = result.to_dict()
 
-  return ret
-
-@app.route('/grower_plants', methods=['GET'])
-def grower_plants():
-  plants = growers_plants.stream()
-  
-  ret = {}
-  for plant in plants:
-    ret[plant.id] = plant.to_dict()
-  
   return ret
