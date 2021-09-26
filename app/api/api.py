@@ -1,5 +1,5 @@
 import time
-from flask import Flask, request
+from flask import Flask, request, abort
 from firebase_admin import credentials, firestore, initialize_app
 from objects.plant import Plant
 
@@ -32,6 +32,7 @@ def plant():
   plants.document(u'growers_plants').set({plant.id: vars(plant)})
 
   return vars(plant)
+  
 
 @app.route('/plant/<id>', methods=['GET', 'PUT'])
 def plant_id(id):
