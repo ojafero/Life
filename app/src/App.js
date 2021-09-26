@@ -5,6 +5,7 @@ import SplashPage from "./SplashPage";
 import GrowerAddPlantPage from "./GrowerAddPlantPage";
 
 //components
+
 import Plant from "./components/Plant";
 
 import ActivistPage from "./components/ActivistPage";
