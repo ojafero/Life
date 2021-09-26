@@ -7,7 +7,6 @@ import Header from "./Header";
 function GrowerDashboardPage() {
   return (
     <div className="GrowerDashboardPage">
-      <Header />
       <GrowerWelcomeMessage />
       <GrowerPageBody />
     </div>
