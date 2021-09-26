@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { Button } from "antd";
 import { Progress } from "antd";
 import Webcam from "react-webcam";
+import Header from "./Header";
 
 function GrowerAddPlantPage() {
   const [stepNumber, setStepNumber] = useState(1);
@@ -83,51 +84,58 @@ function GrowerAddPlantPage() {
   console.log("stepNumber", stepNumber);
 
   return (
-    <div className="GrowerAddPlantPage">
-      <h1 className="GrowerAddPlantPage__title">
-        Add your plant to our platform in 3 steps
-      </h1>
-      <div className="GrowerAddPlantPage__progress">
-        <Progress percent={progress} />
-      </div>
-      <div className="GrowerAddPlant__stepDescription">
-        {outputSetDescription()}
-      </div>
-      {stepNumber == 2 || stepNumber == 3 ? (
-        <Webcam
-          audio={false}
-          height={250}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          width={500}
-          videoConstraints={videoConstraints}
-        />
-      ) : null}
-      <Button
-        className="GrowerAddPlant__button"
-        type="primary"
-        onClick={runAction}
-      >
-        {stepNumber === 4 ? "Go To Dashboard" : buttonText}
-      </Button>
-      {stepNumber === 2 || stepNumber == 3 ? (
+    <>
+      <Header />
+
+      <div className="GrowerAddPlantPage">
+        <h1 className="GrowerAddPlantPage__title">
+          Add your plant to our platform in 3 steps
+        </h1>
+        <div className="GrowerAddPlantPage__progress">
+          <Progress percent={progress} />
+        </div>
+        <div className="GrowerAddPlant__stepDescription">
+          {outputSetDescription()}
+        </div>
+        {stepNumber == 2 || stepNumber == 3 ? (
+          <Webcam
+            audio={false}
+            height={250}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            width={500}
+            videoConstraints={videoConstraints}
+          />
+        ) : null}
         <Button
           className="GrowerAddPlant__button"
           type="primary"
-          onClick={updateToThirdStep}
+          onClick={runAction}
         >
-          Confirm Photo
+          {stepNumber === 4 ? "Go To Dashboard" : buttonText}
         </Button>
-      ) : null}
+        {stepNumber === 2 || stepNumber == 3 ? (
+          <Button
+            className="GrowerAddPlant__button"
+            type="primary"
+            onClick={updateToThirdStep}
+          >
+            Confirm Photo
+          </Button>
+        ) : null}
 
-      {imageAddress == null ? null : (
-        <div className="GrowerAddPlantPage__imageCaptured">
-          <span>Captured Photo: </span>
+        {imageAddress == null ? null : (
+          <div className="GrowerAddPlantPage__imageCaptured">
+            <span>Captured Photo: </span>
 
-          <img src={imageAddress} style={{ width: "400px", height: "200px" }} />
-        </div>
-      )}
-    </div>
+            <img
+              src={imageAddress}
+              style={{ width: "400px", height: "200px" }}
+            />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 
