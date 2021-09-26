@@ -1,0 +1,17 @@
+.GrowerPageBody__plantsList {
+  padding-top: 20px;
+  padding-left: 10vw;
+  font-size: 1.2rem;
+}
+
+.GrowerPageBody__plantsList > h1 {
+  margin-bottom: 0px;
+}
+
+.GrowerPageBody__plantsList hr {
+  max-width: 100px;
+  background-color: pink;
+  height: 1px;
+  border: 0px;
+  margin-left: 0.5px;
+}
