@@ -32,7 +32,7 @@ function PlantInfo(growerPlantData) {
           width > 700 ? "w-25" : "w-100"
         }`}
       >
-        <i className='fas fa-leaf me-2'></i>
+        <i className='fas fa-leaf me-2 green-icon'></i>
         {plantName}
       </div>
       <p
@@ -40,7 +40,7 @@ function PlantInfo(growerPlantData) {
           width > 700 ? "w-25" : "w-100"
         }`}
       >
-        <i className='fas fa-leaf me-2'></i>
+        <i className='fas fa-leaf me-2 green-icon'></i>
         Species: {plantSpecies}
       </p>
       <Row

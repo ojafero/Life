@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import React, { useState, useEffect } from "react";
-import SplashPage from "./SplashPage";
 
 //components
 import Plant from "./components/Plant"
+import SplashPage from "./SplashPage"
+import ActivistPage from "./components/ActivistPage"
+
 function App() {
   const [currentTime, setCurrentTime] = useState(0)
 
@@ -19,7 +20,12 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path='/' exact><SplashPage /></Route>
+        <Route path='/' exact>
+          <SplashPage />
+        </Route>
+        <Route path='/home'>
+          <ActivistPage />
+        </Route>
         <Route path='/plants/:id'>
           <Plant />
         </Route>
