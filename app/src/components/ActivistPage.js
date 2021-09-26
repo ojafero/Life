@@ -1,5 +1,6 @@
 import React from "react"
 import { Button, Container, Image } from "react-bootstrap"
+import { uuid } from "uuidv4"
 
 import PopulateCards from "./PopulateCards"
 
@@ -16,28 +17,28 @@ import vilaPlant from "../assets/Vila.jfif"
 function ActivistPage() {
   const trendingPlantsDummyData = [
     {
-      plantId: "1",
+      plantId: uuid(),
       plantImg: umbrellaPlant,
       plantName: "Plant 1",
       plantHealth: "Healthy",
       plantersName: "Jon Snow"
     },
     {
-      plantId: "2",
+      plantId: uuid(),
       plantImg: castIronPlant,
       plantName: "Plant 2",
       plantHealth: "Healthy",
       plantersName: "Billy Bob"
     },
     {
-      plantId: "3",
+      plantId: uuid(),
       plantImg: greenFinger,
       plantName: "Plant 3",
       plantHealth: "Healthy",
       plantersName: "Eric Gordon"
     },
     {
-      plantId: "4",
+      plantId: uuid(),
       plantImg: shadeLoving,
       plantName: "Plant 4",
       plantHealth: "Healthy",
@@ -47,28 +48,28 @@ function ActivistPage() {
 
   const showSomeLovePlantsDummyData = [
     {
-      plantId: "1",
+      plantId: uuid(),
       plantImg: vilaPlant,
       plantName: "Plant 1",
       plantHealth: "Healthy",
       plantersName: "Jon Snow"
     },
     {
-      plantId: "2",
+      plantId: uuid(),
       plantImg: greenFinger,
       plantName: "Plant 2",
       plantHealth: "Healthy",
       plantersName: "Billy Bob"
     },
     {
-      plantId: "3",
+      plantId: uuid(),
       plantImg: shadeLoving,
       plantName: "Plant 3",
       plantHealth: "Healthy",
       plantersName: "Eric Gordon"
     },
     {
-      plantId: "4",
+      plantId: uuid(),
       plantImg: umbrellaPlant,
       plantName: "Plant 4",
       plantHealth: "Healthy",
