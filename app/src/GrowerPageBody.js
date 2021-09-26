@@ -13,7 +13,16 @@ function GrowerPageBody() {
       <div className="GrowerPageBody__plantsList">
         <h1>Your Plants</h1>
         <hr />
-        <DashboardPlant />
+        <DashboardPlant
+          title="Apple"
+          status="healthy"
+          imgUrl="https://firebasestorage.googleapis.com/v0/b/shellhacks-f8271.appspot.com/o/AppleHealthy.png?alt=media&token=ea5b0a99-f3c1-4de2-9d4d-c6eac23932f2"
+        />
+        <DashboardPlant
+          title="Cherry"
+          status="Might have a potential disease of Powdery Mildew"
+          imgUrl="https://firebasestorage.googleapis.com/v0/b/shellhacks-f8271.appspot.com/o/cherryMildew.png?alt=media&token=90e47c77-0006-481a-b2d1-3a548a4e2434"
+        />
       </div>
       <div className="GrowerPageBody__actions">
         <h1>Actions</h1>

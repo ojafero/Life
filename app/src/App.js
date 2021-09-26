@@ -8,6 +8,7 @@ import GrowerAddPlantPage from "./GrowerAddPlantPage";
 import Plant from "./components/Plant";
 
 import ActivistPage from "./components/ActivistPage";
+import Header from "./Header";
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <Switch>
         <Route path="/" exact>
           <SplashPage />
@@ -32,11 +34,11 @@ function App() {
         <Route path="/growerAddPlant" exact>
           <GrowerAddPlantPage />
         </Route>
-        <Route path="/home">
-          <ActivistPage />
-        </Route>
         <Route path="/plants/:id">
           <Plant />
+        </Route>
+        <Route path="/home">
+          <ActivistPage />
         </Route>
       </Switch>
     </Router>

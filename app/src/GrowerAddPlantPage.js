@@ -85,8 +85,6 @@ function GrowerAddPlantPage() {
 
   return (
     <>
-      <Header />
-
       <div className="GrowerAddPlantPage">
         <h1 className="GrowerAddPlantPage__title">
           Add your plant to our platform in 3 steps

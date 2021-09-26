@@ -1,7 +1,7 @@
 .GrowerPageBody {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .GrowerPageBody__plantsList {
   padding-top: 20px;

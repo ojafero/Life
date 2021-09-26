@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { uuid } from "uuidv4"
 import { Button, Modal, Alert } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 //components
 import Map from "./Map"
