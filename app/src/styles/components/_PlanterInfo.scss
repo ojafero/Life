@@ -1,0 +1,21 @@
+.profile-pic {
+  max-width: 300px;
+  height: 300px;
+}
+
+#funding-meter {
+  height: 50px;
+}
+
+.progress-bar.yellow {
+  background-color: $yellow !important;
+}
+#tag-badges {
+  border: 1px solid black;
+  width: 250px;
+  height: 100px;
+}
+
+.custom-badges {
+  background-color: $dark-green;
+}

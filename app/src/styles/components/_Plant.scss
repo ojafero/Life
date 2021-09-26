@@ -1,0 +1,13 @@
+#plant {
+  background-color: $cream;
+}
+
+.alert-fixed {
+  position: fixed;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  margin-top: 10px;
+  z-index: 9999;
+  border-radius: 10px;
+}
