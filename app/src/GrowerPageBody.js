@@ -30,6 +30,21 @@ function GrowerPageBody() {
             Add Plant
           </div>
         </Card>
+        <Card
+          bordered={true}
+          style={{
+            width: 200,
+            height: 100,
+            backgroundColor: "#FF6652",
+          }}
+        >
+          <div
+            className="GrowerPageBodyActions__addPlantButton"
+            style={{ color: "white" }}
+          >
+            Weekly Payout: 10$
+          </div>
+        </Card>
       </div>
     </div>
   );
