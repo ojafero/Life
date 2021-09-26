@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import "./SplashPage.css"
+import { Link } from "react-router-dom"
 import "react-awesome-button/src/styles/themes/theme-amber"
 import { AwesomeButton } from "react-awesome-button"
 
