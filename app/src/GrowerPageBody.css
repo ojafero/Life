@@ -1,6 +1,7 @@
 .GrowerPageBody {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .GrowerPageBody__plantsList {
   padding-top: 20px;
@@ -13,9 +14,9 @@
 }
 
 .GrowerPageBody__plantsList hr {
-  max-width: 100px;
+  max-width: 300px;
   background-color: pink;
-  height: 1px;
+  height: 2px;
   border: 0px;
   margin-left: 0.5px;
 }
