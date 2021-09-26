@@ -1,3 +1,7 @@
+.GrowerPageBody {
+  display: flex;
+  justify-content: space-between;
+}
 .GrowerPageBody__plantsList {
   padding-top: 20px;
   padding-left: 20vw;
@@ -14,4 +18,16 @@
   height: 1px;
   border: 0px;
   margin-left: 0.5px;
+}
+
+.GrowerPageBody__actions {
+  padding-right: 15vw;
+}
+
+.GrowerPageBodyActions__addPlantButton {
+  vertical-align: center;
+}
+
+.addPlantButton__icon {
+  padding-right: 5px;
 }
