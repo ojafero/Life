@@ -73,7 +73,7 @@ function GrowerAddPlantPage() {
 
   const outputSetDescription = () => {
     if (stepNumber == 3) {
-      return "We use machine learning to identify the health of plant. Please take a picture of the leaf of the same plant";
+      return "We use machine learning to identify the health of a plant. Please take a picture of the leaf of that same plant";
     } else if (stepNumber == 4) {
       return "Your Plant will be added to our platform Shortly";
     } else {
