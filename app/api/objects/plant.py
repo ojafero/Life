@@ -1,6 +1,6 @@
 class Plant(object):
-  def __init__(self, name, grower, images, owners, is_public, id=None, species=None, location=None,
-    funding=None, upvotes=None, health=None):
+  def __init__(self, name, grower, images, is_public, id=None, species=None, location=None,
+    funding=0, upvotes=0, health=None, owners=1):
     self.id = id
     self.name = name
     self.species = species
@@ -15,7 +15,7 @@ class Plant(object):
 
   @staticmethod
   def from_dict(source):
-    plant = Plant(source[u'name'], source[u'grower'], source[u'images'], source[u'owners'], source[u'is_public'])
+    plant = Plant(source[u'name'], source[u'grower'], source[u'images'], source[u'is_public'])
 
     if source.get(u'health'):
       plant.health = source[u'health']
@@ -31,5 +31,8 @@ class Plant(object):
 
     if source.get(u'upvotes'):
       plant.upvotes = source[u'upvotes']
+
+    if source.get(u'owners'):
+      plant.owners = source[u'owners']
 
     return plant
