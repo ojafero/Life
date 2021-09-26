@@ -3,6 +3,7 @@ import "./GrowerPageBody.css";
 import { Card } from "antd";
 import DashboardPlant from "./DashboardPlant";
 import { PlusCircleOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
@@ -16,20 +17,22 @@ function GrowerPageBody() {
       </div>
       <div className="GrowerPageBody__actions">
         <h1>Actions</h1>
-        <Card
-          bordered={true}
-          style={{ width: 200, height: 100, backgroundColor: "#7FDA47" }}
-        >
-          <div
-            className="GrowerPageBodyActions__addPlantButton"
-            style={{ color: "white" }}
+        <Link to="/growerAddPlant">
+          <Card
+            bordered={true}
+            style={{ width: 200, height: 100, backgroundColor: "#7FDA47" }}
           >
-            <span className="addPlantButton__icon">
-              <PlusCircleOutlined />
-            </span>
-            Add Plant
-          </div>
-        </Card>
+            <div
+              className="GrowerPageBodyActions__addPlantButton"
+              style={{ color: "white" }}
+            >
+              <span className="addPlantButton__icon">
+                <PlusCircleOutlined />
+              </span>
+              Add Plant
+            </div>
+          </Card>
+        </Link>
         <Card
           bordered={true}
           style={{
