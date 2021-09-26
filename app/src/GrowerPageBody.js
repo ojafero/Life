@@ -13,7 +13,16 @@ function GrowerPageBody() {
       <div className="GrowerPageBody__plantsList">
         <h1>Your Plants</h1>
         <hr />
-        <DashboardPlant />
+        <DashboardPlant
+          title="Apple"
+          status="healthy"
+          imgUrl="https://media.discordapp.net/attachments/891038176863481906/891623497342799913/BzanigGM3gKjAAAAAElFTkSuQmCC.png"
+        />
+        <DashboardPlant
+          title="Cherry"
+          status="Might have a potential disease of Powdery Mildew"
+          imgUrl="https://media.discordapp.net/attachments/891038176863481906/891624038357684264/ujGu03Ahb36yIjckAgcgdyErwGkVK6aYjTY4wxxpg3Bw8BhwPnArsALwG3AZOHoRfAgfIJ4OvA88Dn7YXaGGOMMcaMEO4FzgYmo4.png?width=1888&height=650"
+        />
       </div>
       <div className="GrowerPageBody__actions">
         <h1>Actions</h1>

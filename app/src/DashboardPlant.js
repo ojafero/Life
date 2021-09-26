@@ -5,22 +5,17 @@ import { Button } from "antd";
 
 const { Meta } = Card;
 
-function DashboardPlant() {
+function DashboardPlant({ title, status, imgUrl }) {
   return (
     <div className="DashboardPlant">
       <Card
         hoverable
         style={{ width: 350 }}
-        cover={
-          <img
-            alt="example"
-            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/how-to-grow-corn-1528315419.jpg?crop=1.00xw:0.747xh;0,0.177xh&resize=1200:*"
-          />
-        }
+        cover={<img alt="example" src={imgUrl} height="300" />}
       >
         {" "}
-        <Meta title="Corn" className="DashboardPlant__title" />
-        <div className="DashboardPlant__health">Status: Healthy</div>
+        <Meta title={title} className="DashboardPlant__title" />
+        <div className="DashboardPlant__health">Status: {status}</div>
         <div className="DashboardPlant__buttons">
           <Button type="primary">Preview</Button>
           <Button>Publish</Button>
