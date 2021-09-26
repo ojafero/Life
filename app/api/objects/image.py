@@ -1,26 +1,11 @@
 class Image(object):
-  def __init__(self, url, upload_date):
+  def __init__(self, id, url, upload_date):
+    self.id = id
     self.url = url
     self.upload_date = upload_date
 
   @staticmethod
   def from_dict(source):
-    return Image(source[u'url'], source[u'upload_date'])
-
-  def to_dict(self):
-    dest = {
-      u'url': self.url,
-      u'upload_date': self.upload_date
-    }
-
-    return dest
-
-  def __repr__(self):
-    return(
-      f'Image(\
-        url={self.url}, \
-        upload_date={self.upload_date} \
-      )'
-    )
+    return Image(source[u'id'], source[u'url'], source[u'upload_date'])
             
   

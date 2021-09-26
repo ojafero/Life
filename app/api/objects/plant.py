@@ -1,21 +1,35 @@
-class Plant(Object):
-  def __init__(self, name, species, health, grower, location, 
-    funding, upvotes, images, owners):
+class Plant(object):
+  def __init__(self, name, grower, images, owners, is_public, id=None, species=None, location=None,
+    funding=None, upvotes=None, health=None):
+    self.id = id
     self.name = name
     self.species = species
-    self.health = health
     self.grower = grower
     self.location = location
     self.funding = funding
     self.upvotes = upvotes
     self.images = images
     self.owners = owners
+    self.health = health
+    self.is_public = is_public
 
   @staticmethod
   def from_dict(source):
-    plant = Plant(source[u'name'], source[u'species'],
-      source[u'health'], source[u'grower'], source[u'location'],
-      source[u'funding', source[u'upvotes'], source[u'images'],
-      source[u'owners'])
+    plant = Plant(source[u'name'], source[u'grower'], source[u'images'], source[u'owners'], source[u'is_public'])
+
+    if source.get(u'health'):
+      plant.health = source[u'health']
+
+    if source.get(u'species'):
+      plant.species = source[u'species']
+    
+    if source.get(u'location'):
+      plant.location = source[u'location']
+
+    if source.get(u'funding'):
+      plant.funding = source[u'funding']
+
+    if source.get(u'upvotes'):
+      plant.upvotes = source[u'upvotes']
 
     return plant
