@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { Image, Container, Card, Row } from "react-bootstrap"
-import placeholder from "../assets/placeholder.png"
 
 function PlantInfo(growerPlantData) {
   const { imageId, plantName, plantSpecies, plantImages } =
@@ -33,7 +32,7 @@ function PlantInfo(growerPlantData) {
         }`}
       >
         <i className='fas fa-leaf me-2 green-icon'></i>
-        {plantName}
+        Grower: Billy Bob Joe
       </div>
       <p
         className={`text-start fs-3 ps-4 mb-3 ms-5 ${
@@ -41,7 +40,7 @@ function PlantInfo(growerPlantData) {
         }`}
       >
         <i className='fas fa-leaf me-2 green-icon'></i>
-        Species: {plantSpecies}
+        Species: <i>{plantSpecies}</i>
       </p>
       <Row
         xs={1}
