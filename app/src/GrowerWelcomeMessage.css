@@ -1,7 +1,7 @@
 .GrowerWelcomeMessage {
   display: flex;
   padding-top: 30px;
-  padding-left: 10vw;
+  padding-left: 20vw;
   align-items: center;
 }
 
@@ -9,8 +9,7 @@
   vertical-align: middle;
   width: 70px;
   height: 70px;
-  padding-right: 35px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 }
 
 .GrowerWelcomeMessage__text {
@@ -21,7 +20,7 @@
 
 .GrowerWelcomeMessage__title {
   max-width: 500px;
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 0px;
   /* font-size: medium; */
 }
