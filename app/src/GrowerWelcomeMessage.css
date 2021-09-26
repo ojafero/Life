@@ -1,0 +1,33 @@
+.GrowerWelcomeMessage {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 20vw;
+  align-items: center;
+}
+
+.GrowerWelcomeMessage__avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.GrowerWelcomeMessage__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.GrowerWelcomeMessage__title {
+  max-width: 500px;
+  font-size: 4.5rem;
+  margin-bottom: 0px;
+  /* font-size: medium; */
+}
+
+.GrowerWelcomeMessage__pageDescription {
+  padding-top: 10px;
+  max-width: 400px;
+  font-size: 1rem;
+  color: #808080;
+}

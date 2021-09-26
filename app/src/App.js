@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import React, { useState, useEffect } from "react";
+import GrowerDashboardPage from "./GrowerDashboardPage";
 import SplashPage from "./SplashPage";
 
 //components
