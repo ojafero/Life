@@ -16,6 +16,8 @@ import plantPicThree from "../assets/sago.jpg"
 function Plant() {
   const [show, setShow] = useState(false)
   const [showAlert, setShowAlert] = useState(false)
+  const [growerPlants, setGrowerPlants] = useState([])
+  const [donations, setDonations] = useState(75)
 
   const handleClose = () => setShow(false)
   const handleShow = () => {
@@ -24,6 +26,7 @@ function Plant() {
 
   const handleDonation = () => {
     setShowAlert(true)
+    setDonations(donations + 10)
     handleClose()
   }
 
@@ -38,10 +41,23 @@ function Plant() {
     }
   }, [showAlert])
 
+  useEffect(() => {
+    fetch('/plants/Billy Bob Joe')
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+        throw response;
+      })
+      .then(plants => {
+        setGrowerPlants(plants)
+      })
+  }, [])
+
   const plantData = {
     growerData: {
       growerId: uuid(),
-      growerName: "Juan Molina",
+      growerName: "Billy Bob Joe",
       growerProfilePic: farmerPlaceholder,
       growerLocation: {
         lat: 25.61148,
@@ -60,42 +76,43 @@ function Plant() {
     },
     growerPlantData: {
       plantId: uuid(),
-      plantName: "Random plant name",
-      plantSpecies: "Sago",
+      plantName: "Maria's Sago Palm",
+      plantSpecies: "Cycas Revoluta",
       plantImages: [
         {
           imageId: uuid(),
           image: plantPicOne,
-          caption: "Example Text 1",
-          upvotes: 0
+          caption: "March 2021",
+          upvotes: 4
         },
         {
           imageId: uuid(),
           image: plantPicTwo,
-          caption: "Example Text 2",
-          upvotes: 0
+          caption: "July 2021",
+          upvotes: 8
         },
         {
           imageId: uuid(),
           image: plantPicThree,
-          caption: "Example Text 3",
-          upvotes: 0
+          caption: "September 2021",
+          upvotes: 3
         }
       ],
-      donations: 85,
+      donations: donations,
       donationsCap: 100
     }
   }
   return (
     <div id='plant'>
-      <PlanterInfo plantData={plantData} />
+      <Map center={plantData.growerData.growerLocation} zoom={16} />
+      <PlanterInfo plantData={plantData}/>
       <PlantInfo growerPlantData={plantData.growerPlantData} />
-      <div className='w-100 d-flex justify-content-center mb-3'>
-        <Button id='booster-btn' className='w-50 m-0 fs-5' onClick={handleShow}>
+      <div className='w-100 d-flex justify-content-center mb-5'>
+        <Button id='booster-btn' className='w-25 mb-5 fs-5' onClick={handleShow}>
           Boost <i className='fas fa-donate'></i>
         </Button>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} centered>
           <Modal.Header>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
@@ -134,7 +151,6 @@ function Plant() {
           </Alert.Heading>
         </Alert>
       </div>
-      <Map center={plantData.growerData.growerLocation} zoom={16} />
     </div>
   )
 }

@@ -5,8 +5,9 @@ import { Container, Image, ProgressBar, Badge } from "react-bootstrap"
 
 function PlanterInfo(plantData, growerPlantData) {
   const [status, setStatus] = useState()
-  const { growerName, growerProfilePic, growerLocation, tags } =
+  const { growerProfilePic, growerLocation, tags } =
     plantData.plantData.growerData
+  const plantName = plantData.plantData.growerPlantData.plantName
   const { donations, donationsCap } = plantData.plantData.growerPlantData
   const [address, setAddress] = useState("")
   const [width, setWidth] = React.useState(window.innerWidth)
@@ -80,7 +81,7 @@ function PlanterInfo(plantData, growerPlantData) {
           id='planter-info'
           className=' d-flex flex-column justify-content-center ms-3'
         >
-          <p className='fs-1'>{growerName}</p>
+          <p className='fs-1'>{plantName}</p>
           <p className='fs-4'>{address}</p>
           <div className=''>
             <label htmlFor='tag-badges' className='fs-5'>
@@ -116,7 +117,7 @@ function PlanterInfo(plantData, growerPlantData) {
         <label htmlFor='funding-meter' className='fs-5'>
           Funding Meter
         </label>
-        <span className='fs-6'>Co-owned by 100</span>
+        <span className='fs-6'>Co-owned with 50 others</span>
       </div>
     </Container>
   )
