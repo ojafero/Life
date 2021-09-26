@@ -63,6 +63,7 @@ function Plant() {
       plantId: uuid(),
       plantName: "Random plant name",
       plantSpecies: "Sago",
+      plantHealth: "healthy",
       plantImages: [
         {
           imageId: uuid(),
