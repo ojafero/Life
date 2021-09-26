@@ -8,7 +8,7 @@ function SplashPage() {
   return (
     <div>
       <div className="SplashPage">
-        <div className="SplashPage__title">Life</div>
+        <div className="SplashPage__title">iPlant.AI</div>
         <div className="SplashPage__description">
           LEVERAGING AI TO COMBAT <span>EXCESS CO2</span> ONE PLANT AT A TIME
         </div>
