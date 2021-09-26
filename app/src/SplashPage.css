@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+@font-face {
+  font-family: "jaapokki";
+  src: url("fonts/jaapokki-regular.ttf");
+}
+
+.SplashPage {
+  background-image: url("https://images.unsplash.com/photo-1524602585632-a2a01c12307c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2107&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  padding-left: 70vw;
+}
+
+.SplashPage__title {
+  padding-top: 30vh;
+  /* padding-left: 10px; */
+  /* padding-left: 70vw; */
+  color: white;
+  font-size: 7rem;
+  font-family: "jaapokki";
+}
+
+.SplashPage__description {
+  color: white;
+  max-width: 400px;
+  font-size: 1.5rem;
+  /* padding-left: 20px; */
+  position: relative;
+  bottom: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.SplashPage__description > span {
+  color: #cc0000;
+}
+
+.SplashPage__buttons {
+  /* padding-left: 20px; */
+}
+
+.SplashPage__rightButton {
+  padding-left: 10px;
+}
