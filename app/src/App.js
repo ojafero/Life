@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import SplashPage from "./SplashPage";
 
 //components
 import Plant from "./components/Plant"
@@ -17,6 +19,7 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path='/' exact><SplashPage /></Route>
         <Route path='/plants/:id'>
           <Plant />
         </Route>
