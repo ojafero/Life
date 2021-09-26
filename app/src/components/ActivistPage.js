@@ -122,7 +122,7 @@ function ActivistPage() {
         <div className='d-flex flex-column align-items-center py-2 w-100'>
           <Image src={plantToolsBanner} className='custom-banner' />
           <Button variant='success' className='w-25 my-5'>
-            Start Something Great
+            Begin
           </Button>
         </div>
       </div>
